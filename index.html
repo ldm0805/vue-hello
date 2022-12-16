@@ -11,9 +11,11 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+            <!-- v-bind corto -->
+            <div :class="flex_classes"  class="col-12">
                 <h1 id="app">{{ message }}</h1>
                 <img :src="link_img" alt="logo">
+                <!-- v-bind lungo -->
                 <h3 v-bind:class="margin_top">{{ message_two }}</h3>
             </div>
             <div class="row mt-5">
