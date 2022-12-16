@@ -9,11 +9,26 @@
     <title>Document</title>
 </head>
 <body>
-    
     <div id="app">
         <div class="container">
-            <h1 id="app">{{ message }}</h1>
-            <img :src="link_img" alt="logo">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                <h1 id="app">{{ message }}</h1>
+                <img :src="link_img" alt="logo">
+                <h3 v-bind:class="margin_top">{{ message_two }}</h3>
+            </div>
+            <div class="row mt-5">
+                <div class="col-6">
+                    <input type="text" class="form-control" placeholder="Inserisci il tuo nome" v-model="name">
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" placeholder="Inserisci il tuo cognome" v-model="surname">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                   <h2 v-bind:class="custom_style">Benvenuto {{name}} {{surname}}</h2>
+                </div> 
+            </div>
     </div> 
 
     <!-- Link Vuejs -->
